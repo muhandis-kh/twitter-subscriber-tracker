@@ -47,7 +47,7 @@ while user.followers_count < 10000:
     user = api.get_user(screen_name="AkhmatovichUz")
     print(user.followers_count)
     
-# if user.followers_count == 9999:
+if user.followers_count == 9999:
     browser.get(f"https://twitter.com/i/flow/login")
     wait = WebDriverWait(browser, 30)
 
