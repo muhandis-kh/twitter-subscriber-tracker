@@ -78,10 +78,11 @@ while user.followers_count < 10000:
     time.sleep(5)
     
     browser.get("https://twitter.com/AkhmatovichUz")
-    element = wait.until(EC.visibility_of_element_located((By.CLASS_NAME, "css-18t94o4.css-1dbjc4n.r-42olwf.r-sdzlij.r-1phboty.r-rs99b7.r-2yi16.r-1qi8awa.r-1ny4l3l.r-ymttw5.r-o7ynqc.r-6416eg.r-lrvibr")))
+    follow_button = wait.until(EC.visibility_of_element_located((By.CLASS_NAME, "css-18t94o4.css-1dbjc4n.r-42olwf.r-sdzlij.r-1phboty.r-rs99b7.r-2yi16.r-1qi8awa.r-1ny4l3l.r-ymttw5.r-o7ynqc.r-6416eg.r-lrvibr")))
     browser.save_screenshot("before_ss.png")
-    time.sleep(2)
-    follow_button = browser.find_element(By.CLASS_NAME, "css-18t94o4.css-1dbjc4n.r-42olwf.r-sdzlij.r-1phboty.r-rs99b7.r-15ysp7h.r-4wgw6l.r-1ny4l3l.r-ymttw5.r-o7ynqc.r-6416eg.r-lrvibr")
+    
+    time.sleep(5)
+    #  = browser.find_element(By.CLASS_NAME, "css-18t94o4.css-1dbjc4n.r-42olwf.r-sdzlij.r-1phboty.r-rs99b7.r-15ysp7h.r-4wgw6l.r-1ny4l3l.r-ymttw5.r-o7ynqc.r-6416eg.r-lrvibr")
     follow_button.click()
     browser.save_screenshot("after_ss.png")
     
