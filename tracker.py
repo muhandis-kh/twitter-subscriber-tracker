@@ -39,9 +39,8 @@ auth = tweepy.OAuth1UserHandler(
 )
 
 api = tweepy.API(auth)
-# api2 = tweepy.Client(auth2)
 user = api.get_user(screen_name="AkhmatovichUz")
-# api3.follow_user(target_user_id="AkhmatovichUz", user_auth=True)
+
 
 while user.followers_count < 10000:
     user = api.get_user(screen_name="AkhmatovichUz")
